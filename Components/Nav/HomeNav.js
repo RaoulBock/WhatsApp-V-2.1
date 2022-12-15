@@ -1,16 +1,21 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 
-const HomeNav = ({ name, number, icon }) => {
+const HomeNav = ({ name, number, icon, icon_add }) => {
   return (
     <View style={styles.outline}>
       <View>
         <Text style={[styles.text, styles.name]}>{name}</Text>
         <Text style={[styles.text, styles.number]}>{number}</Text>
       </View>
-      <TouchableOpacity style={styles.btn}>
-        <Text>{icon}</Text>
-      </TouchableOpacity>
+      <View style={styles.grid}>
+        <TouchableOpacity style={styles.btn}>
+          <Text>{icon}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.btn, { paddingLeft: 20 }]}>
+          <Text>{icon_add}</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -36,6 +41,10 @@ const styles = StyleSheet.create({
   number: {
     color: "gray",
     fontSize: 15
+  },
+  grid: {
+    flexDirection: "row",
+    alignItems: "center"
   }
 });
 

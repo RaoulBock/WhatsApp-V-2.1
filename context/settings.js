@@ -16,5 +16,26 @@ export const APP_ICONS = {
       name="ios-search-outline"
       style={{ color: "#21d37c", fontWeight: "500", fontSize: 28 }}
     />
+  ),
+  PLUS: (
+    <Ionicons
+      name="ios-add-outline"
+      style={{ color: "#21d37c", fontWeight: "500", fontSize: 28 }}
+    />
   )
 };
+
+export const STATUS_USERS = [
+  {
+    id: 1,
+    name: "Raoul Bock",
+    image:
+      "https://images.ctfassets.net/kdawwlsweh27/2LtummpjO849eQ83yGGiUN/316e62a71020a924f9f663b6ca6b7eda/Fresh_Stock_Content.jpg"
+  },
+  {
+    id: 2,
+    name: "Anthony Bock",
+    image:
+      "https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg"
+  }
+];
