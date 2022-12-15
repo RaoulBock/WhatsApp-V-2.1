@@ -22,6 +22,18 @@ export const APP_ICONS = {
       name="ios-add-outline"
       style={{ color: "#21d37c", fontWeight: "500", fontSize: 28 }}
     />
+  ),
+  HOME: (
+    <Ionicons
+      name="ios-home-outline"
+      style={{ color: "#21d37c", fontWeight: "500", fontSize: 28 }}
+    />
+  ),
+  PHONE: (
+    <Ionicons
+      name="ios-call-outline"
+      style={{ color: "#21d37c", fontWeight: "500", fontSize: 28 }}
+    />
   )
 };
 

@@ -22,7 +22,7 @@ export default ChatsView;
 const styles = StyleSheet.create({
   outline: {
     width: width,
-    paddingHorizontal: 20
+    paddingHorizontal: 10
   },
   title: {
     color: "#404040",
