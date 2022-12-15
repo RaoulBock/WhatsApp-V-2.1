@@ -1,14 +1,23 @@
-import { StyleSheet, Text, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Platform,
+  StatusBar,
+  ScrollView
+} from "react-native";
 import React from "react";
 import { AppContext } from "../../context/AppContext";
 import Nav from "../Nav/Nav";
-import { APP_ICONS } from "../../context/settings";
+import { APP_ICONS, MESSAGE_FROM, MESSAGE_TO } from "../../context/settings";
 import ChatInput from "../Input/ChatInput";
+import FromCard from "../Card/FromCard";
+import ToCard from "../Card/ToCard";
 
 const SpecChatScreen = () => {
   const { specChat: item } = React.useContext(AppContext);
   return (
-    <View>
+    <View style={styles.outline}>
       <View>
         <Nav
           title={item.message_from}
@@ -17,7 +26,14 @@ const SpecChatScreen = () => {
         />
       </View>
       <View style={{ flex: 1 }}>
-        <Text>hi</Text>
+        <ScrollView>
+          {MESSAGE_FROM.map((e, i) => {
+            return <FromCard key={i} item={e} />;
+          })}
+          {MESSAGE_TO.map((e, i) => {
+            return <ToCard key={i} item={e} />;
+          })}
+        </ScrollView>
       </View>
       <ChatInput placeholder={"Type here ..."} />
     </View>
@@ -26,4 +42,9 @@ const SpecChatScreen = () => {
 
 export default SpecChatScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  outline: {
+    flex: 1,
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
+  }
+});
