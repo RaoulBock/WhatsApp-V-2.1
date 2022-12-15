@@ -7,13 +7,21 @@ import {
   TouchableOpacity
 } from "react-native";
 import React from "react";
+import { AppContext } from "../../context/AppContext";
 
 const width = Dimensions.get("window").width;
 const height = Dimensions.get("window").height;
 
 const ChatsCard = ({ item }) => {
+  const { setSpecChat, setNavPage } = React.useContext(AppContext);
+
   return (
-    <TouchableOpacity style={styles.outline}>
+    <TouchableOpacity
+      style={styles.outline}
+      onPress={() => {
+        setSpecChat(item);
+      }}
+    >
       <View style={styles.grid}>
         <Image source={{ uri: item.image }} style={styles.image} />
         <View style={styles.info}>

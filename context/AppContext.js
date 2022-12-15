@@ -3,7 +3,7 @@ import { APP_PAGES } from "./settings";
 
 export const AppContext = React.createContext({
   navPage: "",
-  setNavPage: (val) => {},
+  setNavPage: (val) => {}
 });
 
 const AppProvider = ({ children }) => {
@@ -12,6 +12,7 @@ const AppProvider = ({ children }) => {
   const [errorMsg, setErrorMsg] = React.useState("");
   const [userLog, setUserLog] = React.useState({ number: null });
   const [userInfo, setUserInfo] = React.useState([]);
+  const [specChat, setSpecChat] = React.useState();
 
   return (
     <AppContext.Provider
@@ -26,6 +27,8 @@ const AppProvider = ({ children }) => {
         setUserLog,
         userInfo,
         setUserInfo,
+        specChat,
+        setSpecChat
       }}
     >
       {children}
