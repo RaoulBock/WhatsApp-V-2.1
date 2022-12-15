@@ -1,20 +1,39 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StatusBar } from "expo-status-bar";
+import LoginScreen from "./Components/Screens/LoginScreen";
+import { APP_PAGES } from "./context/settings";
+import AppProvider, { AppContext } from "./context/AppContext";
+import VerifyScreen from "./Components/Screens/VerifyScreen";
+import HomeScreen from "./Components/Screens/HomeScreen";
+import { View } from "react-native";
+import SettingsScreen from "./Components/Screens/SettingsScreen";
 
-export default function App() {
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <AppProvider>
+      <NavWrapper />
+    </AppProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const NavWrapper = () => {
+  const { navPage, setNavPage } = React.useContext(AppContext);
+  const onSetNavPage = (e) => {
+    setNavPage(e);
+  };
+
+  React.useEffect(() => {
+    console.log("App Nav: ", navPage);
+  }, [navPage]);
+
+  return (
+    <>
+      {navPage === APP_PAGES.APP.LOGIN && <LoginScreen />}
+      {navPage === APP_PAGES.APP.VERIFY && <VerifyScreen />}
+      {navPage === APP_PAGES.APP.HOME && <HomeScreen />}
+      {navPage === APP_PAGES.APP.SETTINGS && <SettingsScreen />}
+    </>
+  );
+};
+
+export default App;
