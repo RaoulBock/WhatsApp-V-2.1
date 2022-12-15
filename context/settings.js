@@ -52,6 +52,12 @@ export const APP_ICONS = {
       name="ios-notifications-outline"
       style={{ color: "#21d37c", fontWeight: "500", fontSize: 28 }}
     />
+  ),
+  DOTS: (
+    <Ionicons
+      name="ios-ellipsis-vertical-outline"
+      style={{ color: "#fff", fontWeight: "500", fontSize: 28 }}
+    />
   )
 };
 

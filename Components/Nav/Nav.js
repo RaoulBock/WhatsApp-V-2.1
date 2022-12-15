@@ -3,7 +3,7 @@ import React from "react";
 import { AppContext } from "../../context/AppContext";
 import { APP_ICONS, APP_PAGES } from "../../context/settings";
 
-const Nav = ({ title, icon }) => {
+const Nav = ({ title, icon, icon_options }) => {
   const { setNavPage } = React.useContext(AppContext);
   return (
     <View style={styles.outline}>
@@ -14,8 +14,8 @@ const Nav = ({ title, icon }) => {
         <Text>{icon}</Text>
       </TouchableOpacity>
       <Text style={styles.title}>{title}</Text>
-      <TouchableOpacity>
-        <Text>{}</Text>
+      <TouchableOpacity style={styles.btn}>
+        <Text>{icon_options}</Text>
       </TouchableOpacity>
     </View>
   );
