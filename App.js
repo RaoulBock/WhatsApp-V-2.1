@@ -7,6 +7,7 @@ import VerifyScreen from "./Components/Screens/VerifyScreen";
 import HomeScreen from "./Components/Screens/HomeScreen";
 import { View } from "react-native";
 import SettingsScreen from "./Components/Screens/SettingsScreen";
+import SpecChatScreen from "./Components/Screens/SpecChatScreen";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ const NavWrapper = () => {
       {navPage === APP_PAGES.APP.VERIFY && <VerifyScreen />}
       {navPage === APP_PAGES.APP.HOME && <HomeScreen />}
       {navPage === APP_PAGES.APP.SETTINGS && <SettingsScreen />}
+      {navPage === APP_PAGES.APP.SPEC_CHAT && <SpecChatScreen />}
     </>
   );
 };

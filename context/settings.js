@@ -11,7 +11,12 @@ export const APP_PAGES = {
 import { Ionicons } from "react-native-vector-icons";
 
 export const APP_ICONS = {
-  BACK: <Ionicons name="Ionicons" />,
+  BACK: (
+    <Ionicons
+      name="ios-arrow-back"
+      style={{ color: "#fff", fontWeight: "500", fontSize: 28 }}
+    />
+  ),
   SEARCH: (
     <Ionicons
       name="ios-search-outline"

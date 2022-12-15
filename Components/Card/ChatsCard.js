@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import React from "react";
 import { AppContext } from "../../context/AppContext";
+import { APP_PAGES } from "../../context/settings";
 
 const width = Dimensions.get("window").width;
 const height = Dimensions.get("window").height;
@@ -20,6 +21,7 @@ const ChatsCard = ({ item }) => {
       style={styles.outline}
       onPress={() => {
         setSpecChat(item);
+        setNavPage(APP_PAGES.APP.SPEC_CHAT);
       }}
     >
       <View style={styles.grid}>
