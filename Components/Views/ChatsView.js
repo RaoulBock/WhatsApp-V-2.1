@@ -1,6 +1,13 @@
-import { StyleSheet, Text, View, Dimensions, ScrollView } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  ScrollView,
+  TouchableOpacity
+} from "react-native";
 import React from "react";
-import { CHATS_DEMO } from "../../context/settings";
+import { APP_ICONS, CHATS_DEMO } from "../../context/settings";
 import ChatsCard from "../Card/ChatsCard";
 
 const width = Dimensions.get("window").width;
@@ -9,7 +16,12 @@ const height = Dimensions.get("window").height;
 const ChatsView = () => {
   return (
     <ScrollView style={styles.outline}>
-      <Text style={styles.title}>Chats</Text>
+      <View style={styles.grid}>
+        <Text style={styles.title}>Chats</Text>
+        <TouchableOpacity>
+          <Text>{APP_ICONS.PLUS}</Text>
+        </TouchableOpacity>
+      </View>
       {CHATS_DEMO.map((e, i) => {
         return <ChatsCard key={i} item={e} />;
       })}
@@ -28,5 +40,10 @@ const styles = StyleSheet.create({
     color: "#404040",
     fontWeight: "500",
     fontSize: 30
+  },
+  grid: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between"
   }
 });

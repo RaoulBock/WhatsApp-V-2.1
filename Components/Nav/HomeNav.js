@@ -12,7 +12,7 @@ const HomeNav = ({ name, number, icon, icon_add }) => {
         <TouchableOpacity style={styles.btn}>
           <Text>{icon}</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.btn, { paddingLeft: 20 }]}>
+        <TouchableOpacity style={[styles.btn, {}]}>
           <Text>{icon_add}</Text>
         </TouchableOpacity>
       </View>

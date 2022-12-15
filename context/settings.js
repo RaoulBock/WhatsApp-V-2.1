@@ -34,6 +34,18 @@ export const APP_ICONS = {
       name="ios-call-outline"
       style={{ color: "#21d37c", fontWeight: "500", fontSize: 28 }}
     />
+  ),
+  CAMERA: (
+    <Ionicons
+      name="ios-camera-outline"
+      style={{ color: "#21d37c", fontWeight: "500", fontSize: 28 }}
+    />
+  ),
+  NOTIFICATION: (
+    <Ionicons
+      name="ios-notifications-outline"
+      style={{ color: "#21d37c", fontWeight: "500", fontSize: 28 }}
+    />
   )
 };
 

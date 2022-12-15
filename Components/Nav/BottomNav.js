@@ -11,6 +11,11 @@ const BottomNav = () => {
     },
     {
       id: 2,
+      name: "Notification",
+      icon: APP_ICONS.NOTIFICATION
+    },
+    {
+      id: 3,
       name: "Calls",
       icon: APP_ICONS.PHONE
     }
@@ -34,14 +39,10 @@ export default BottomNav;
 const styles = StyleSheet.create({
   outline: {
     backgroundColor: "#eee",
-    width: 200,
-    position: "absolute",
-    bottom: "1%",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    left: "25%",
-    padding: 10,
-    borderRadius: 50
+    paddingHorizontal: 25,
+    paddingVertical: 10
   }
 });

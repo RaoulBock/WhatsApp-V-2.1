@@ -23,7 +23,6 @@ const HomeScreen = () => {
           name="Raoul Bock"
           number={"0812345678"}
           icon={APP_ICONS.SEARCH}
-          icon_add={APP_ICONS.PLUS}
         />
       </View>
       <View style={{ flex: 1 }}>
