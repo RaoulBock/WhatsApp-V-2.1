@@ -27,8 +27,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginHorizontal: 20,
-    marginVertical: 10
+    marginHorizontal: 20
   },
   text: {
     color: "#404040",

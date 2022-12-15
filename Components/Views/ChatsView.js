@@ -8,14 +8,12 @@ const height = Dimensions.get("window").height;
 
 const ChatsView = () => {
   return (
-    <View style={styles.outline}>
+    <ScrollView style={styles.outline}>
       <Text style={styles.title}>Chats</Text>
-      <ScrollView>
-        {CHATS_DEMO.map((e, i) => {
-          return <ChatsCard key={i} item={e} />;
-        })}
-      </ScrollView>
-    </View>
+      {CHATS_DEMO.map((e, i) => {
+        return <ChatsCard key={i} item={e} />;
+      })}
+    </ScrollView>
   );
 };
 

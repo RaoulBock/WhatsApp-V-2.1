@@ -48,5 +48,61 @@ export const CHATS_DEMO = [
       "Commodo non cillum fugiat reprehenderit adipisicing velit. Dolore dolor laborum ut exercitation. Proident ut irure elit ad nulla labore veniam cillum adipisicing fugiat occaecat.",
     image:
       "https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg"
+  },
+  {
+    id: 2,
+    message_from: "Anthony Bock",
+    short_message:
+      "Commodo non cillum fugiat reprehenderit adipisicing velit. Dolore dolor laborum ut exercitation. Proident ut irure elit ad nulla labore veniam cillum adipisicing fugiat occaecat.",
+    image:
+      "https://images.ctfassets.net/kdawwlsweh27/2LtummpjO849eQ83yGGiUN/316e62a71020a924f9f663b6ca6b7eda/Fresh_Stock_Content.jpg"
+  },
+  {
+    id: 3,
+    message_from: "Raoul Bock",
+    short_message:
+      "Commodo non cillum fugiat reprehenderit adipisicing velit. Dolore dolor laborum ut exercitation. Proident ut irure elit ad nulla labore veniam cillum adipisicing fugiat occaecat.",
+    image:
+      "https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg"
+  },
+  {
+    id: 4,
+    message_from: "Anthony Bock",
+    short_message:
+      "Commodo non cillum fugiat reprehenderit adipisicing velit. Dolore dolor laborum ut exercitation. Proident ut irure elit ad nulla labore veniam cillum adipisicing fugiat occaecat.",
+    image:
+      "https://images.ctfassets.net/kdawwlsweh27/2LtummpjO849eQ83yGGiUN/316e62a71020a924f9f663b6ca6b7eda/Fresh_Stock_Content.jpg"
+  },
+  {
+    id: 1,
+    message_from: "Raoul Bock",
+    short_message:
+      "Commodo non cillum fugiat reprehenderit adipisicing velit. Dolore dolor laborum ut exercitation. Proident ut irure elit ad nulla labore veniam cillum adipisicing fugiat occaecat.",
+    image:
+      "https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg"
+  },
+  {
+    id: 2,
+    message_from: "Anthony Bock",
+    short_message:
+      "Commodo non cillum fugiat reprehenderit adipisicing velit. Dolore dolor laborum ut exercitation. Proident ut irure elit ad nulla labore veniam cillum adipisicing fugiat occaecat.",
+    image:
+      "https://images.ctfassets.net/kdawwlsweh27/2LtummpjO849eQ83yGGiUN/316e62a71020a924f9f663b6ca6b7eda/Fresh_Stock_Content.jpg"
+  },
+  {
+    id: 3,
+    message_from: "Raoul Bock",
+    short_message:
+      "Commodo non cillum fugiat reprehenderit adipisicing velit. Dolore dolor laborum ut exercitation. Proident ut irure elit ad nulla labore veniam cillum adipisicing fugiat occaecat.",
+    image:
+      "https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg"
+  },
+  {
+    id: 4,
+    message_from: "Anthony Bock",
+    short_message:
+      "Commodo non cillum fugiat reprehenderit adipisicing velit. Dolore dolor laborum ut exercitation. Proident ut irure elit ad nulla labore veniam cillum adipisicing fugiat occaecat.",
+    image:
+      "https://images.ctfassets.net/kdawwlsweh27/2LtummpjO849eQ83yGGiUN/316e62a71020a924f9f663b6ca6b7eda/Fresh_Stock_Content.jpg"
   }
 ];
