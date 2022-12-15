@@ -5,7 +5,10 @@ const StatusCard = ({ item }) => {
   return (
     <View style={styles.outline}>
       <Image source={{ uri: item.image }} style={styles.image} />
-      <Text style={styles.text}>{item.name}</Text>
+      <View>
+        <Text style={styles.text}>{item.name}</Text>
+        <Text style={styles.text}>12:00am</Text>
+      </View>
     </View>
   );
 };
@@ -14,10 +17,9 @@ export default StatusCard;
 
 const styles = StyleSheet.create({
   outline: {
-    marginHorizontal: 20,
     marginVertical: 10,
-    alignItems: "center",
-    backgroundColor: "red"
+    flexDirection: "row",
+    alignItems: "center"
   },
   image: {
     width: 70,
@@ -28,6 +30,6 @@ const styles = StyleSheet.create({
     color: "#404040",
     fontWeight: "500",
     fontSize: 18,
-    marginVertical: 10
+    paddingHorizontal: 10
   }
 });
