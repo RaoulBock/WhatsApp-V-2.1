@@ -39,3 +39,14 @@ export const STATUS_USERS = [
       "https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg"
   }
 ];
+
+export const CHATS_DEMO = [
+  {
+    id: 1,
+    message_from: "Raoul Bock",
+    short_message:
+      "Commodo non cillum fugiat reprehenderit adipisicing velit. Dolore dolor laborum ut exercitation. Proident ut irure elit ad nulla labore veniam cillum adipisicing fugiat occaecat.",
+    image:
+      "https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg"
+  }
+];
