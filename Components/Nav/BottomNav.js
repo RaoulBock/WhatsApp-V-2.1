@@ -24,6 +24,12 @@ const BottomNav = () => {
       icon: APP_ICONS.PHONE,
       onPress: () => setTab(2),
     },
+    {
+      id: 3,
+      name: "Discover",
+      icon: APP_ICONS.DISCOVER,
+      onPress: () => setTab(3),
+    },
   ];
 
   return (
@@ -52,7 +58,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 10,
+    paddingHorizontal: 5,
     paddingVertical: 6,
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
@@ -71,7 +77,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#9d79f4",
     flexDirection: "row",
     alignItems: "center",
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
     paddingVertical: 5,
     borderRadius: 10,
   },

@@ -10,11 +10,9 @@ export default ChatInput;
 const styles = StyleSheet.create({
   input: {
     backgroundColor: "#eee",
-    borderRadius: 50,
     padding: 10,
-    marginHorizontal: 25,
     fontWeight: "500",
     color: "#404040",
-    fontWeight: "500"
-  }
+    fontWeight: "500",
+  },
 });

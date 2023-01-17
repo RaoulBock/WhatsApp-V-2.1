@@ -36,6 +36,7 @@ const ChatsView = () => {
     >
       <View style={styles.grid}>
         <Text style={styles.title}>Chats</Text>
+        <Text style={styles.count}>{CHATS_DEMO.length} Chats</Text>
       </View>
       <View style={{ marginVertical: 10 }}>
         <SearchInput placeholder={"Search for chats"} />
@@ -64,5 +65,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     marginTop: 10,
+  },
+  count: {
+    fontWeight: "500",
+    color: "#333",
   },
 });

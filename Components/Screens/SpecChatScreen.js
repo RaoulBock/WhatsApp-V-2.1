@@ -4,7 +4,9 @@ import {
   View,
   Platform,
   StatusBar,
-  ScrollView
+  ScrollView,
+  KeyboardAvoidingView,
+  SafeAreaView,
 } from "react-native";
 import React from "react";
 import { AppContext } from "../../context/AppContext";
@@ -35,7 +37,11 @@ const SpecChatScreen = () => {
           })}
         </ScrollView>
       </View>
-      <ChatInput placeholder={"Type here ..."} />
+      <SafeAreaView>
+        <KeyboardAvoidingView behavior={"padding"}>
+          <ChatInput placeholder={"Type here ..."} />
+        </KeyboardAvoidingView>
+      </SafeAreaView>
     </View>
   );
 };
@@ -45,6 +51,6 @@ export default SpecChatScreen;
 const styles = StyleSheet.create({
   outline: {
     flex: 1,
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
-  }
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  },
 });

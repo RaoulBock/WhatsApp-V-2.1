@@ -71,6 +71,12 @@ export const APP_ICONS = {
       style={{ color: "#5f40a6", fontWeight: "500", fontSize: 20 }}
     />
   ),
+  DISCOVER: (
+    <Ionicons
+      name={"ios-compass-outline"}
+      style={{ color: "#fff", fontWeight: "500", fontSize: 28 }}
+    />
+  ),
 };
 
 export const STATUS_USERS = [
