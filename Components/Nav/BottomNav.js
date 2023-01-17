@@ -24,12 +24,12 @@ const BottomNav = () => {
       icon: APP_ICONS.PHONE,
       onPress: () => setTab(2),
     },
-    {
-      id: 3,
-      name: "Discover",
-      icon: APP_ICONS.DISCOVER,
-      onPress: () => setTab(3),
-    },
+    // {
+    //   id: 3,
+    //   name: "Discover",
+    //   icon: APP_ICONS.DISCOVER,
+    //   onPress: () => setTab(3),
+    // },
   ];
 
   return (

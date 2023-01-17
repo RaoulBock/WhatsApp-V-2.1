@@ -31,17 +31,18 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 10,
     backgroundColor: "#5f40a6",
+    elevation: 5,
     // borderBottomWidth: 1,
     // borderBottomColor: "#eee"
   },
   title: {
-    color: "#404040",
+    color: "#fff",
     fontSize: 18,
     fontWeight: "500",
   },
   btn: {
-    backgroundColor: "#21d37c",
-    padding: 5,
+    backgroundColor: "#9d79f4",
+    padding: 8,
     borderRadius: 50,
   },
 });

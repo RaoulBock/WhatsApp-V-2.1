@@ -10,6 +10,7 @@ import {
 import React from "react";
 import { AppContext } from "../../context/AppContext";
 import ContactCard from "../Card/ContactCard";
+import SearchInput from "../Input/SearchInput";
 
 const width = Dimensions.get("window").width;
 const height = Dimensions.get("window").height;
@@ -20,6 +21,10 @@ const ContactView = () => {
     <View style={styles.outline}>
       <View style={styles.grid}>
         <Text style={styles.title}>Contact</Text>
+        <Text style={styles.count}>{contacts.length} Contacts</Text>
+      </View>
+      <View style={{ marginVertical: 10 }}>
+        <SearchInput placeholder={"Search for chats"} />
       </View>
       <FlatList
         data={contacts}
@@ -62,5 +67,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     marginTop: 10,
+  },
+  count: {
+    fontWeight: "500",
+    color: "#333",
   },
 });

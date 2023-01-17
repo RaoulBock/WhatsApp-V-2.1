@@ -14,7 +14,7 @@ export const APP_ICONS = {
   BACK: (
     <Ionicons
       name="ios-arrow-back"
-      style={{ color: "#fff", fontWeight: "500", fontSize: 28 }}
+      style={{ color: "#5f40a6", fontWeight: "500", fontSize: 20 }}
     />
   ),
   SEARCH: (
@@ -56,7 +56,7 @@ export const APP_ICONS = {
   DOTS: (
     <Ionicons
       name="ios-ellipsis-vertical-outline"
-      style={{ color: "#fff", fontWeight: "500", fontSize: 28 }}
+      style={{ color: "#5f40a6", fontWeight: "500", fontSize: 20 }}
     />
   ),
   SETTINGS: (
@@ -74,7 +74,7 @@ export const APP_ICONS = {
   DISCOVER: (
     <Ionicons
       name={"ios-compass-outline"}
-      style={{ color: "#fff", fontWeight: "500", fontSize: 28 }}
+      style={{ color: "#5f40a6", fontWeight: "500", fontSize: 20 }}
     />
   ),
 };

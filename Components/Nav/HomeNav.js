@@ -15,10 +15,10 @@ const HomeNav = ({ name, number, icon, icon_add }) => {
         </TouchableOpacity>
       </View>
       <View style={styles.grid}>
-        <TouchableOpacity style={styles.btn}>
+        <TouchableOpacity style={[styles.btn, { marginHorizontal: 10 }]}>
           <Text>{icon}</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity style={styles.btn}>
           <Text>{icon_add}</Text>
         </TouchableOpacity>
       </View>
