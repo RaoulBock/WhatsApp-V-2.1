@@ -12,6 +12,7 @@ const SearchInput = ({ placeholder, value, multiline, onChangeText }) => {
         multiline={multiline}
         style={styles.input}
         onChangeText={onChangeText}
+        placeholderTextColor={"#5f40a6"}
       />
     </View>
   );
@@ -21,7 +22,7 @@ export default SearchInput;
 
 const styles = StyleSheet.create({
   outline: {
-    backgroundColor: "#f6f6f6",
+    backgroundColor: "#9d79f44a",
     flexDirection: "row",
     alignItems: "center",
     paddingVertical: 8,
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   input: {
-    backgroundColor: "#f6f6f6",
+    backgroundColor: "transparent",
     width: "100%",
     fontWeight: "500",
     color: "#404040",
