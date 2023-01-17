@@ -14,6 +14,7 @@ import StatusCard from "../Card/StatusCard";
 import ChatsView from "../Views/ChatsView";
 import StatusView from "../Views/StatusView";
 import BottomNav from "../Nav/BottomNav";
+import ContactView from "../Views/ContactView";
 
 const HomeScreen = () => {
   return (
@@ -33,6 +34,7 @@ const HomeScreen = () => {
         >
           <ChatsView />
           <StatusView />
+          <ContactView />
         </ScrollView>
       </View>
       <BottomNav />

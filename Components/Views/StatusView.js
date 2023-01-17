@@ -24,11 +24,11 @@ export default StatusView;
 const styles = StyleSheet.create({
   outline: {
     width: width,
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
   },
   title: {
     color: "#404040",
     fontWeight: "500",
-    fontSize: 30
-  }
+    fontSize: 30,
+  },
 });

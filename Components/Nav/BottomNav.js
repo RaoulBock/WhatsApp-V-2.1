@@ -7,26 +7,27 @@ const BottomNav = () => {
     {
       id: 1,
       name: "Home",
-      icon: APP_ICONS.HOME
+      icon: APP_ICONS.HOME,
     },
     {
       id: 2,
       name: "Notification",
-      icon: APP_ICONS.NOTIFICATION
+      icon: APP_ICONS.NOTIFICATION,
     },
     {
       id: 3,
       name: "Calls",
-      icon: APP_ICONS.PHONE
-    }
+      icon: APP_ICONS.PHONE,
+    },
   ];
 
   return (
     <View style={styles.outline}>
       {MENU.map((e, i) => {
         return (
-          <TouchableOpacity key={i}>
+          <TouchableOpacity style={styles.btn} key={i}>
             <Text>{e.icon}</Text>
+            <Text style={styles.name}>{e.name}</Text>
           </TouchableOpacity>
         );
       })}
@@ -38,11 +39,23 @@ export default BottomNav;
 
 const styles = StyleSheet.create({
   outline: {
-    backgroundColor: "#eee",
+    backgroundColor: "#fafafa",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
     paddingHorizontal: 25,
-    paddingVertical: 10
-  }
+    paddingVertical: 10,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    elevation: 10,
+  },
+  btn: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  name: {
+    fontWeight: "500",
+    color: "#404040",
+    paddingHorizontal: 8,
+  },
 });
