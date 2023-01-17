@@ -4,7 +4,7 @@ import {
   View,
   Platform,
   StatusBar,
-  ScrollView
+  ScrollView,
 } from "react-native";
 import React from "react";
 import { AppContext } from "../../context/AppContext";
@@ -45,6 +45,6 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   outline: {
     flex: 1,
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
-  }
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  },
 });
