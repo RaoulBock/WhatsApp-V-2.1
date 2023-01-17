@@ -1,5 +1,6 @@
 import React from "react";
 import { APP_PAGES } from "./settings";
+import * as Contacts from "expo-contacts";
 
 export const AppContext = React.createContext({
   navPage: "",
@@ -13,6 +14,36 @@ const AppProvider = ({ children }) => {
   const [userLog, setUserLog] = React.useState({ number: null });
   const [userInfo, setUserInfo] = React.useState([]);
   const [specChat, setSpecChat] = React.useState();
+  const [contacts, setContacts] = React.useState([]);
+  const [searchTerm, setSearchTerm] = React.useState("");
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [filteredContacts, setFilteredContacts] = React.useState([]);
+
+  React.useEffect(() => {
+    const getContacts = async () => {
+      // Ask for permission to access contacts
+      const { status } = await Contacts.requestPermissionsAsync();
+      if (status === "granted") {
+        // Get all contacts
+        const { data } = await Contacts.getContactsAsync({
+          fields: [Contacts.Fields.PhoneNumbers, Contacts.Fields.Name],
+        });
+
+        // Parse the JSON data
+        const parsedContacts = data.map((contact) => {
+          return {
+            name: contact.name,
+            phoneNumber: contact.phoneNumbers[0].number,
+          };
+        });
+
+        setContacts(parsedContacts);
+      } else {
+        throw new Error("Contacts permission not granted");
+      }
+    };
+    getContacts();
+  }, []);
 
   return (
     <AppContext.Provider
@@ -29,6 +60,14 @@ const AppProvider = ({ children }) => {
         setUserInfo,
         specChat,
         setSpecChat,
+        contacts,
+        setContacts,
+        searchTerm,
+        setSearchTerm,
+        isLoading,
+        setIsLoading,
+        filteredContacts,
+        setFilteredContacts,
       }}
     >
       {children}

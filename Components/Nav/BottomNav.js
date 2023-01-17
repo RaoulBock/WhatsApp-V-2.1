@@ -26,7 +26,7 @@ const BottomNav = () => {
       {MENU.map((e, i) => {
         return (
           <TouchableOpacity style={styles.btn} key={i}>
-            {/* <Text>{e.icon}</Text> */}
+            <Text>{e.icon}</Text>
             <Text style={styles.name}>{e.name}</Text>
           </TouchableOpacity>
         );
