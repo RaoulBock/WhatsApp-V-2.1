@@ -23,6 +23,7 @@ const ChatsCard = ({ item }) => {
         setSpecChat(item);
         setNavPage(APP_PAGES.APP.SPEC_CHAT);
       }}
+      activeOpacity={1}
     >
       <View style={styles.grid}>
         <Image source={{ uri: item.image }} style={styles.image} />
@@ -31,7 +32,9 @@ const ChatsCard = ({ item }) => {
             <Text style={styles.name}>{item.message_from}</Text>
             <Text style={styles.time}>12:00am</Text>
             <Text style={item.active ? styles.active : styles.dot}>•</Text>
-            <Text style={styles.activeText}>{item.active ? "Active" : ""}</Text>
+            <Text style={styles.activeText}>
+              {item.active ? "Active" : "Offline"}
+            </Text>
           </View>
           <Text style={{ width: width, color: "#404040", fontSize: 12 }}>
             {item.short_message.substring(0, 100)}
@@ -47,8 +50,8 @@ export default ChatsCard;
 
 const styles = StyleSheet.create({
   outline: {
-    borderBottomColor: "#eee",
-    borderBottomWidth: 1,
+    borderTopColor: "#eee",
+    borderTopWidth: 1,
     paddingVertical: 10,
   },
   image: {
@@ -80,7 +83,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
   },
   dot: {
-    color: "gray",
+    color: "red",
     fontWeight: "700",
     fontSize: 28,
   },

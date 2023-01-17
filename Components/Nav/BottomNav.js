@@ -12,37 +12,34 @@ const BottomNav = () => {
       icon: APP_ICONS.HOME,
       onPress: () => setTab(0),
     },
-    {
-      id: 1,
-      name: "Status",
-      icon: APP_ICONS.NOTIFICATION,
-      onPress: () => setTab(1),
-    },
+    // {
+    //   id: 1,
+    //   name: "Status",
+    //   icon: APP_ICONS.NOTIFICATION,
+    //   onPress: () => setTab(1),
+    // },
     {
       id: 2,
-      name: "Contact",
+      name: "Calls",
       icon: APP_ICONS.PHONE,
       onPress: () => setTab(2),
     },
-    // {
-    //   id: 3,
-    //   name: "Discover",
-    //   icon: APP_ICONS.DISCOVER,
-    //   onPress: () => setTab(3),
-    // },
+    {
+      id: 3,
+      name: "Discover",
+      icon: APP_ICONS.DISCOVER,
+      onPress: () => setTab(3),
+    },
   ];
 
   return (
     <View style={styles.outline}>
       {MENU.map((e, i) => {
         return (
-          <TouchableOpacity
-            style={tab === e.id ? styles.active : styles.btn}
-            key={i}
-            onPress={e.onPress}
-          >
+          <TouchableOpacity style={styles.grid} key={i} onPress={e.onPress}>
             <Text>{e.icon}</Text>
             <Text style={styles.name}>{e.name}</Text>
+            <Text style={tab === e.id ? styles.active : styles.btn}>{"•"}</Text>
           </TouchableOpacity>
         );
       })}
@@ -58,15 +55,16 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 5,
-    paddingVertical: 6,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
     elevation: 10,
   },
   btn: {
-    flexDirection: "row",
-    alignItems: "center",
+    color: "transparent",
+    textAlign: "center",
+    fontSize: 25,
   },
   name: {
     fontWeight: "500",
@@ -74,11 +72,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
   },
   active: {
-    backgroundColor: "#9d79f4",
+    color: "#9d79f4",
+    textAlign: "center",
+    fontSize: 25,
+  },
+  grid: {
     flexDirection: "row",
     alignItems: "center",
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    borderRadius: 10,
   },
 });

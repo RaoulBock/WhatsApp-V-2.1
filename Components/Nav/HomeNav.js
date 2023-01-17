@@ -1,18 +1,16 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { APP_ICONS } from "../../context/settings";
 
-const HomeNav = ({ name, number, icon, icon_add }) => {
+const HomeNav = ({ name, number, icon, icon_add, img }) => {
   return (
     <View style={styles.outline}>
       <View style={styles.display}>
-        <View>
+        <Image source={{ uri: img }} style={styles.image} />
+        <View style={{ paddingHorizontal: 10 }}>
           <Text style={[styles.text, styles.name]}>{name}</Text>
           <Text style={[styles.text, styles.number]}>{number}</Text>
         </View>
-        <TouchableOpacity style={[styles.btn, { marginHorizontal: 10 }]}>
-          <Text>{APP_ICONS.EDIT}</Text>
-        </TouchableOpacity>
       </View>
       <View style={styles.grid}>
         <TouchableOpacity style={[styles.btn, { marginHorizontal: 10 }]}>
@@ -60,13 +58,21 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   btn: {
-    backgroundColor: "#9d79f4",
+    backgroundColor: "#9d79f44a",
     padding: 8,
     borderRadius: 50,
   },
   display: {
     flexDirection: "row",
     alignItems: "center",
+    backgroundColor: "#9d79f44a",
+    padding: 7,
+    borderRadius: 14,
+  },
+  image: {
+    width: 35,
+    height: 35,
+    borderRadius: 50,
   },
 });
 

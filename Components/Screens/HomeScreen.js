@@ -26,19 +26,25 @@ const HomeScreen = () => {
           number={"0812345678"}
           icon={APP_ICONS.SETTINGS}
           icon_add={APP_ICONS.DISCOVER}
+          img={
+            "https://i.pinimg.com/originals/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg"
+          }
         />
       </View>
-      <View style={{ flex: 1 }}>
-        <ScrollView
-          horizontal
-          pagingEnabled
-          showsHorizontalScrollIndicator={false}
-        >
+      <ScrollView>
+        <View style={{}}>
+          <View style={styles.grid}>
+            {STATUS_USERS.map((e, i) => {
+              return <StatusCard key={i} item={e} />;
+            })}
+          </View>
+        </View>
+        <View style={{ flex: 1 }}>
           {tab === 0 && <ChatsView />}
           {tab === 1 && <StatusView />}
           {tab === 2 && <ContactView />}
-        </ScrollView>
-      </View>
+        </View>
+      </ScrollView>
       <BottomNav />
     </View>
   );
@@ -50,5 +56,15 @@ const styles = StyleSheet.create({
   outline: {
     flex: 1,
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  },
+  grid: {
+    flexDirection: "row",
+    marginHorizontal: 10,
+  },
+  title: {
+    color: "#404040",
+    fontWeight: "500",
+    fontSize: 20,
+    marginHorizontal: 10,
   },
 });
