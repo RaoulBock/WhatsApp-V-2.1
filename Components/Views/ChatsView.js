@@ -5,7 +5,7 @@ import {
   Dimensions,
   ScrollView,
   TouchableOpacity,
-  RefreshControl
+  RefreshControl,
 } from "react-native";
 import React from "react";
 import { APP_ICONS, CHATS_DEMO } from "../../context/settings";
@@ -35,9 +35,6 @@ const ChatsView = () => {
     >
       <View style={styles.grid}>
         <Text style={styles.title}>Chats</Text>
-        <TouchableOpacity>
-          <Text>{APP_ICONS.PLUS}</Text>
-        </TouchableOpacity>
       </View>
       {CHATS_DEMO.map((e, i) => {
         return <ChatsCard key={i} item={e} />;
@@ -51,16 +48,16 @@ export default ChatsView;
 const styles = StyleSheet.create({
   outline: {
     width: width,
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
   },
   title: {
     color: "#404040",
     fontWeight: "500",
-    fontSize: 30
+    fontSize: 30,
   },
   grid: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between"
-  }
+    justifyContent: "space-between",
+  },
 });

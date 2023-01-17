@@ -24,7 +24,7 @@ const HomeScreen = () => {
         <HomeNav
           name="Raoul Bock"
           number={"0812345678"}
-          icon={APP_ICONS.SEARCH}
+          // icon={APP_ICONS.SEARCH}
         />
       </View>
       <View style={{ flex: 1 }}>

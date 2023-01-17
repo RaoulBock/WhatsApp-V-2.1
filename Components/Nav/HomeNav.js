@@ -30,9 +30,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 10,
     backgroundColor: "#5f40a6",
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
   },
   text: {
-    color: "#404040",
+    color: "#fff",
     fontWeight: "500",
     fontSize: 18,
   },
@@ -40,8 +42,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   number: {
-    color: "gray",
-    fontSize: 15,
+    color: "#fafafa",
+    fontSize: 13,
+    fontWeight: "400",
   },
   grid: {
     flexDirection: "row",

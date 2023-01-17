@@ -29,6 +29,12 @@ const NavWrapper = () => {
 
   return (
     <>
+      <StatusBar
+        style="light"
+        backgroundColor="#5f40a6"
+        hidden={false}
+        translucent={true}
+      />
       {navPage === APP_PAGES.APP.LOGIN && <LoginScreen />}
       {navPage === APP_PAGES.APP.VERIFY && <VerifyScreen />}
       {navPage === APP_PAGES.APP.HOME && <HomeScreen />}
