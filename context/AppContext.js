@@ -3,7 +3,7 @@ import { APP_PAGES } from "./settings";
 
 export const AppContext = React.createContext({
   navPage: "",
-  setNavPage: (val) => {}
+  setNavPage: (val) => {},
 });
 
 const AppProvider = ({ children }) => {
@@ -28,7 +28,7 @@ const AppProvider = ({ children }) => {
         userInfo,
         setUserInfo,
         specChat,
-        setSpecChat
+        setSpecChat,
       }}
     >
       {children}

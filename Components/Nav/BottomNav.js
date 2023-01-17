@@ -6,17 +6,17 @@ const BottomNav = () => {
   const MENU = [
     {
       id: 1,
-      name: "Home",
+      name: "Chats",
       icon: APP_ICONS.HOME,
     },
     {
       id: 2,
-      name: "Notification",
+      name: "Status",
       icon: APP_ICONS.NOTIFICATION,
     },
     {
       id: 3,
-      name: "Calls",
+      name: "Contact",
       icon: APP_ICONS.PHONE,
     },
   ];
@@ -26,7 +26,7 @@ const BottomNav = () => {
       {MENU.map((e, i) => {
         return (
           <TouchableOpacity style={styles.btn} key={i}>
-            <Text>{e.icon}</Text>
+            {/* <Text>{e.icon}</Text> */}
             <Text style={styles.name}>{e.name}</Text>
           </TouchableOpacity>
         );
