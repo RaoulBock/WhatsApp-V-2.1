@@ -65,6 +65,12 @@ export const APP_ICONS = {
       style={{ color: "#5f40a6", fontWeight: "500", fontSize: 20 }}
     />
   ),
+  EDIT: (
+    <Ionicons
+      name={"ios-pencil-outline"}
+      style={{ color: "#5f40a6", fontWeight: "500", fontSize: 20 }}
+    />
+  ),
 };
 
 export const STATUS_USERS = [

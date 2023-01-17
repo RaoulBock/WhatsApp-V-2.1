@@ -1,12 +1,18 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
+import { APP_ICONS } from "../../context/settings";
 
 const HomeNav = ({ name, number, icon, icon_add }) => {
   return (
     <View style={styles.outline}>
-      <View>
-        <Text style={[styles.text, styles.name]}>{name}</Text>
-        <Text style={[styles.text, styles.number]}>{number}</Text>
+      <View style={styles.display}>
+        <View>
+          <Text style={[styles.text, styles.name]}>{name}</Text>
+          <Text style={[styles.text, styles.number]}>{number}</Text>
+        </View>
+        <TouchableOpacity style={[styles.btn, { marginHorizontal: 10 }]}>
+          <Text>{APP_ICONS.EDIT}</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.grid}>
         <TouchableOpacity style={styles.btn}>
@@ -54,6 +60,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#9d79f4",
     padding: 8,
     borderRadius: 50,
+  },
+  display: {
+    flexDirection: "row",
+    alignItems: "center",
   },
 });
 
