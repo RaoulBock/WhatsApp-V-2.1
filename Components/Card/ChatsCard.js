@@ -4,7 +4,7 @@ import {
   View,
   Image,
   Dimensions,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 import React from "react";
 import { AppContext } from "../../context/AppContext";
@@ -43,26 +43,26 @@ export default ChatsCard;
 
 const styles = StyleSheet.create({
   outline: {
-    marginVertical: 10
+    marginVertical: 10,
   },
   image: {
-    width: 70,
-    height: 70,
-    borderRadius: 50
+    width: 40,
+    height: 40,
+    borderRadius: 50,
   },
   grid: {
-    flexDirection: "row"
+    flexDirection: "row",
   },
   info: {
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
   },
   name: {
     color: "#404040",
     fontWeight: "500",
-    fontSize: 18
+    fontSize: 18,
   },
   time: {
     color: "gray",
-    fontWeight: "500"
-  }
+    fontWeight: "500",
+  },
 });

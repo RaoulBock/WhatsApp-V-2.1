@@ -19,17 +19,17 @@ const styles = StyleSheet.create({
   outline: {
     marginVertical: 10,
     flexDirection: "row",
-    alignItems: "center"
+    alignItems: "center",
   },
   image: {
-    width: 70,
-    height: 70,
-    borderRadius: 50
+    width: 40,
+    height: 40,
+    borderRadius: 50,
   },
   text: {
     color: "#404040",
     fontWeight: "500",
     fontSize: 18,
-    paddingHorizontal: 10
-  }
+    paddingHorizontal: 10,
+  },
 });

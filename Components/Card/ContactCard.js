@@ -14,6 +14,9 @@ const ContactCard = ({ item }) => {
     >
       <View style={styles.grid}>
         {/* <Image source={{ uri: item.image }} style={styles.image} /> */}
+        <View style={styles.slicer}>
+          <Text style={styles.nameIndex}>{item.name.slice(0, 2)}</Text>
+        </View>
         <View style={styles.info}>
           <Text style={styles.name}>{name}</Text>
           <Text>{item.phoneNumber}</Text>
@@ -41,5 +44,26 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     fontSize: 18,
     paddingHorizontal: 10,
+  },
+  grid: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  info: {
+    paddingLeft: 10,
+  },
+  nameIndex: {
+    color: "white",
+    fontWeight: "500",
+    textTransform: "uppercase",
+  },
+  slicer: {
+    backgroundColor: "gray",
+    borderRadius: 50,
+    width: 40,
+    height: 40,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
