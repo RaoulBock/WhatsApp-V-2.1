@@ -20,7 +20,7 @@ export const APP_ICONS = {
   SEARCH: (
     <Ionicons
       name="ios-search-outline"
-      style={{ color: "#21d37c", fontWeight: "500", fontSize: 28 }}
+      style={{ color: "#5f40a6", fontWeight: "500", fontSize: 28 }}
     />
   ),
   PLUS: (
@@ -57,6 +57,12 @@ export const APP_ICONS = {
     <Ionicons
       name="ios-ellipsis-vertical-outline"
       style={{ color: "#fff", fontWeight: "500", fontSize: 28 }}
+    />
+  ),
+  SETTINGS: (
+    <Ionicons
+      name={"ios-settings-outline"}
+      style={{ color: "#5f40a6", fontWeight: "500", fontSize: 20 }}
     />
   ),
 };

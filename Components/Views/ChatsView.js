@@ -10,6 +10,7 @@ import {
 import React from "react";
 import { APP_ICONS, CHATS_DEMO } from "../../context/settings";
 import ChatsCard from "../Card/ChatsCard";
+import SearchInput from "../Input/SearchInput";
 
 const width = Dimensions.get("window").width;
 const height = Dimensions.get("window").height;
@@ -36,6 +37,9 @@ const ChatsView = () => {
       <View style={styles.grid}>
         <Text style={styles.title}>Chats</Text>
       </View>
+      <View style={{ marginVertical: 10 }}>
+        <SearchInput placeholder={"Search for chats"} />
+      </View>
       {CHATS_DEMO.map((e, i) => {
         return <ChatsCard key={i} item={e} />;
       })}
@@ -59,5 +63,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
+    marginTop: 10,
   },
 });

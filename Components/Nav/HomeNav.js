@@ -12,7 +12,7 @@ const HomeNav = ({ name, number, icon, icon_add }) => {
         <TouchableOpacity style={styles.btn}>
           <Text>{icon}</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.btn, {}]}>
+        <TouchableOpacity>
           <Text>{icon_add}</Text>
         </TouchableOpacity>
       </View>
@@ -49,6 +49,11 @@ const styles = StyleSheet.create({
   grid: {
     flexDirection: "row",
     alignItems: "center",
+  },
+  btn: {
+    backgroundColor: "#9d79f4",
+    padding: 8,
+    borderRadius: 50,
   },
 });
 
