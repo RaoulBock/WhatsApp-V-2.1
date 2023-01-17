@@ -27,12 +27,16 @@ const ChatsCard = ({ item }) => {
       <View style={styles.grid}>
         <Image source={{ uri: item.image }} style={styles.image} />
         <View style={styles.info}>
-          <Text style={styles.name}>{item.message_from}</Text>
-          <Text style={{ width: width }}>
-            {item.short_message.substring(0, 40)}
+          <View style={styles.grid}>
+            <Text style={styles.name}>{item.message_from}</Text>
+            <Text style={styles.time}>12:00am</Text>
+            <Text style={item.active ? styles.active : styles.dot}>•</Text>
+            <Text style={styles.activeText}>{item.active ? "Active" : ""}</Text>
+          </View>
+          <Text style={{ width: width, color: "#404040", fontSize: 12 }}>
+            {item.short_message.substring(0, 100)}
             {item.short_message.length >= 20 && "..."}
           </Text>
-          <Text style={styles.time}>12:00am</Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -43,26 +47,45 @@ export default ChatsCard;
 
 const styles = StyleSheet.create({
   outline: {
-    marginVertical: 10,
+    borderBottomColor: "#eee",
+    borderBottomWidth: 1,
+    paddingVertical: 10,
   },
   image: {
-    width: 40,
-    height: 40,
+    width: 50,
+    height: 50,
     borderRadius: 50,
   },
   grid: {
     flexDirection: "row",
+    alignItems: "center",
   },
   info: {
     paddingHorizontal: 10,
   },
   name: {
     color: "#404040",
-    fontWeight: "500",
+    fontWeight: "400",
     fontSize: 18,
   },
   time: {
     color: "gray",
     fontWeight: "500",
+    paddingHorizontal: 10,
+    fontSize: 10,
+  },
+  active: {
+    color: "green",
+    fontWeight: "700",
+    fontSize: 28,
+  },
+  dot: {
+    color: "gray",
+    fontWeight: "700",
+    fontSize: 28,
+  },
+  activeText: {
+    fontWeight: "500",
+    paddingHorizontal: 10,
   },
 });

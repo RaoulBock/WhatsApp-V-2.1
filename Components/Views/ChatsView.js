@@ -36,10 +36,10 @@ const ChatsView = () => {
     >
       <View style={styles.grid}>
         <Text style={styles.title}>Chats</Text>
-        <Text style={styles.count}>{CHATS_DEMO.length} Chats</Text>
       </View>
       <View style={{ marginVertical: 10 }}>
         <SearchInput placeholder={"Search for chats"} />
+        <Text style={styles.count}>{CHATS_DEMO.length} Chats</Text>
       </View>
       {CHATS_DEMO.map((e, i) => {
         return <ChatsCard key={i} item={e} />;
@@ -67,7 +67,9 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   count: {
-    fontWeight: "500",
-    color: "#333",
+    fontWeight: "400",
+    color: "gray",
+    textAlign: "right",
+    fontSize: 12,
   },
 });

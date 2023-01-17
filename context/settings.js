@@ -102,6 +102,7 @@ export const CHATS_DEMO = [
       "Commodo non cillum fugiat reprehenderit adipisicing velit. Dolore dolor laborum ut exercitation. Proident ut irure elit ad nulla labore veniam cillum adipisicing fugiat occaecat.",
     image:
       "https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg",
+    active: false,
   },
   {
     id: 2,
@@ -110,6 +111,7 @@ export const CHATS_DEMO = [
       "Commodo non cillum fugiat reprehenderit adipisicing velit. Dolore dolor laborum ut exercitation. Proident ut irure elit ad nulla labore veniam cillum adipisicing fugiat occaecat.",
     image:
       "https://images.ctfassets.net/kdawwlsweh27/2LtummpjO849eQ83yGGiUN/316e62a71020a924f9f663b6ca6b7eda/Fresh_Stock_Content.jpg",
+    active: false,
   },
   {
     id: 3,
@@ -118,6 +120,7 @@ export const CHATS_DEMO = [
       "Commodo non cillum fugiat reprehenderit adipisicing velit. Dolore dolor laborum ut exercitation. Proident ut irure elit ad nulla labore veniam cillum adipisicing fugiat occaecat.",
     image:
       "https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg",
+    active: false,
   },
   {
     id: 4,
@@ -126,6 +129,7 @@ export const CHATS_DEMO = [
       "Commodo non cillum fugiat reprehenderit adipisicing velit. Dolore dolor laborum ut exercitation. Proident ut irure elit ad nulla labore veniam cillum adipisicing fugiat occaecat.",
     image:
       "https://images.ctfassets.net/kdawwlsweh27/2LtummpjO849eQ83yGGiUN/316e62a71020a924f9f663b6ca6b7eda/Fresh_Stock_Content.jpg",
+    active: false,
   },
   {
     id: 1,
@@ -134,6 +138,7 @@ export const CHATS_DEMO = [
       "Commodo non cillum fugiat reprehenderit adipisicing velit. Dolore dolor laborum ut exercitation. Proident ut irure elit ad nulla labore veniam cillum adipisicing fugiat occaecat.",
     image:
       "https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg",
+    active: false,
   },
   {
     id: 2,
@@ -142,6 +147,7 @@ export const CHATS_DEMO = [
       "Commodo non cillum fugiat reprehenderit adipisicing velit. Dolore dolor laborum ut exercitation. Proident ut irure elit ad nulla labore veniam cillum adipisicing fugiat occaecat.",
     image:
       "https://images.ctfassets.net/kdawwlsweh27/2LtummpjO849eQ83yGGiUN/316e62a71020a924f9f663b6ca6b7eda/Fresh_Stock_Content.jpg",
+    active: true,
   },
   {
     id: 3,
@@ -150,6 +156,7 @@ export const CHATS_DEMO = [
       "Commodo non cillum fugiat reprehenderit adipisicing velit. Dolore dolor laborum ut exercitation. Proident ut irure elit ad nulla labore veniam cillum adipisicing fugiat occaecat.",
     image:
       "https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg",
+    active: false,
   },
   {
     id: 4,
@@ -158,6 +165,7 @@ export const CHATS_DEMO = [
       "Commodo non cillum fugiat reprehenderit adipisicing velit. Dolore dolor laborum ut exercitation. Proident ut irure elit ad nulla labore veniam cillum adipisicing fugiat occaecat.",
     image:
       "https://images.ctfassets.net/kdawwlsweh27/2LtummpjO849eQ83yGGiUN/316e62a71020a924f9f663b6ca6b7eda/Fresh_Stock_Content.jpg",
+    active: false,
   },
 ];
 
