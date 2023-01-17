@@ -30,8 +30,8 @@ const NavWrapper = () => {
   return (
     <>
       <StatusBar
-        style="light"
-        backgroundColor="#5f40a6"
+        style="dark"
+        backgroundColor="#fff"
         hidden={false}
         translucent={true}
       />

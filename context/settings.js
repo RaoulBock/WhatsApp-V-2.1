@@ -62,7 +62,7 @@ export const APP_ICONS = {
   SETTINGS: (
     <Ionicons
       name={"ios-settings-outline"}
-      style={{ color: "#fff", fontWeight: "500", fontSize: 20 }}
+      style={{ color: "#5f40a6", fontWeight: "500", fontSize: 20 }}
     />
   ),
   EDIT: (
@@ -74,7 +74,7 @@ export const APP_ICONS = {
   DISCOVER: (
     <Ionicons
       name={"ios-compass-outline"}
-      style={{ color: "#fff", fontWeight: "500", fontSize: 20 }}
+      style={{ color: "#5f40a6", fontWeight: "500", fontSize: 20 }}
     />
   ),
 };

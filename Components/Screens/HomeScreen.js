@@ -5,6 +5,7 @@ import {
   Platform,
   StatusBar,
   ScrollView,
+  RefreshControl,
 } from "react-native";
 import React from "react";
 import { AppContext } from "../../context/AppContext";
@@ -16,8 +17,18 @@ import StatusView from "../Views/StatusView";
 import BottomNav from "../Nav/BottomNav";
 import ContactView from "../Views/ContactView";
 
+const wait = (timeout) => {
+  return new Promise((resolve) => setTimeout(resolve, timeout));
+};
+
 const HomeScreen = () => {
   const { tab } = React.useContext(AppContext);
+  const [refreshing, setRefreshing] = React.useState(false);
+
+  const onRefresh = React.useCallback(() => {
+    setRefreshing(true);
+    wait(2000).then(() => setRefreshing(false));
+  }, []);
   return (
     <View style={styles.outline}>
       <View>
@@ -25,20 +36,16 @@ const HomeScreen = () => {
           name="Raoul Bock"
           number={"0812345678"}
           icon={APP_ICONS.SETTINGS}
-          icon_add={APP_ICONS.DISCOVER}
           img={
             "https://i.pinimg.com/originals/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg"
           }
         />
       </View>
-      <ScrollView>
-        <View style={{}}>
-          <View style={styles.grid}>
-            {STATUS_USERS.map((e, i) => {
-              return <StatusCard key={i} item={e} />;
-            })}
-          </View>
-        </View>
+      <ScrollView
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        }
+      >
         <View style={{ flex: 1 }}>
           {tab === 0 && <ChatsView />}
           {tab === 1 && <StatusView />}
