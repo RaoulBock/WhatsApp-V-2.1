@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#5f40a6",
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
+    elevation: 5,
   },
   text: {
     color: "#fff",

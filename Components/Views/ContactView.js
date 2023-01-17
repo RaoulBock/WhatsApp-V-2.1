@@ -18,7 +18,9 @@ const ContactView = () => {
   const { contacts, isLoading, setIsLoading } = React.useContext(AppContext);
   return (
     <View style={styles.outline}>
-      <Text style={styles.title}>Contacts</Text>
+      <View style={styles.grid}>
+        <Text style={styles.title}>Contact</Text>
+      </View>
       <FlatList
         data={contacts}
         renderItem={({ item }) => <ContactCard item={item} />}
@@ -54,5 +56,11 @@ const styles = StyleSheet.create({
     color: "#404040",
     fontWeight: "500",
     fontSize: 30,
+  },
+  grid: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginTop: 10,
   },
 });
