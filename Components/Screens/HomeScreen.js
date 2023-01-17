@@ -17,6 +17,7 @@ import BottomNav from "../Nav/BottomNav";
 import ContactView from "../Views/ContactView";
 
 const HomeScreen = () => {
+  const { tab } = React.useContext(AppContext);
   return (
     <View style={styles.outline}>
       <View>
@@ -32,9 +33,9 @@ const HomeScreen = () => {
           pagingEnabled
           showsHorizontalScrollIndicator={false}
         >
-          <ChatsView />
-          <StatusView />
-          <ContactView />
+          {tab === 0 && <ChatsView />}
+          {tab === 1 && <StatusView />}
+          {tab === 2 && <ContactView />}
         </ScrollView>
       </View>
       <BottomNav />

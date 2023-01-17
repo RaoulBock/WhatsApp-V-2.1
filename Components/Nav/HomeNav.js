@@ -28,24 +28,25 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     paddingHorizontal: 10,
-    paddingVertical: 10
+    paddingVertical: 10,
+    backgroundColor: "#5f40a6",
   },
   text: {
     color: "#404040",
     fontWeight: "500",
-    fontSize: 18
+    fontSize: 18,
   },
   name: {
-    fontSize: 20
+    fontSize: 20,
   },
   number: {
     color: "gray",
-    fontSize: 15
+    fontSize: 15,
   },
   grid: {
     flexDirection: "row",
-    alignItems: "center"
-  }
+    alignItems: "center",
+  },
 });
 
 // 11007

@@ -29,18 +29,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     paddingHorizontal: 10,
-    paddingVertical: 10
+    paddingVertical: 10,
+    backgroundColor: "#5f40a6",
     // borderBottomWidth: 1,
     // borderBottomColor: "#eee"
   },
   title: {
     color: "#404040",
     fontSize: 18,
-    fontWeight: "500"
+    fontWeight: "500",
   },
   btn: {
     backgroundColor: "#21d37c",
     padding: 5,
-    borderRadius: 50
-  }
+    borderRadius: 50,
+  },
 });
