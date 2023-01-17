@@ -18,6 +18,7 @@ const AppProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = React.useState("");
   const [isLoading, setIsLoading] = React.useState(false);
   const [filteredContacts, setFilteredContacts] = React.useState([]);
+  const [tab, setTab] = React.useState(0);
 
   React.useEffect(() => {
     const getContacts = async () => {
@@ -68,6 +69,8 @@ const AppProvider = ({ children }) => {
         setIsLoading,
         filteredContacts,
         setFilteredContacts,
+        tab,
+        setTab,
       }}
     >
       {children}

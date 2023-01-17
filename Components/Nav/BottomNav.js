@@ -1,23 +1,28 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { APP_ICONS } from "../../context/settings";
+import { AppContext } from "../../context/AppContext";
 
 const BottomNav = () => {
+  const { tab, setTab } = React.useContext(AppContext);
   const MENU = [
     {
-      id: 1,
+      id: 0,
       name: "Chats",
       icon: APP_ICONS.HOME,
+      onPress: () => setTab(0),
+    },
+    {
+      id: 1,
+      name: "Status",
+      icon: APP_ICONS.NOTIFICATION,
+      onPress: () => setTab(1),
     },
     {
       id: 2,
-      name: "Status",
-      icon: APP_ICONS.NOTIFICATION,
-    },
-    {
-      id: 3,
       name: "Contact",
       icon: APP_ICONS.PHONE,
+      onPress: () => setTab(2),
     },
   ];
 
@@ -25,7 +30,11 @@ const BottomNav = () => {
     <View style={styles.outline}>
       {MENU.map((e, i) => {
         return (
-          <TouchableOpacity style={styles.btn} key={i}>
+          <TouchableOpacity
+            style={tab === e.id ? styles.active : styles.btn}
+            key={i}
+            onPress={e.onPress}
+          >
             <Text>{e.icon}</Text>
             <Text style={styles.name}>{e.name}</Text>
           </TouchableOpacity>
@@ -39,7 +48,7 @@ export default BottomNav;
 
 const styles = StyleSheet.create({
   outline: {
-    backgroundColor: "#fafafa",
+    backgroundColor: "#5f40a6",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
@@ -55,7 +64,7 @@ const styles = StyleSheet.create({
   },
   name: {
     fontWeight: "500",
-    color: "#404040",
+    color: "#fff",
     paddingHorizontal: 8,
   },
 });
