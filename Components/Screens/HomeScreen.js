@@ -41,13 +41,13 @@ const HomeScreen = () => {
     if (scrollY > 50) {
       Animated.timing(bottomNavAnim, {
         toValue: 0,
-        duration: 200,
+        duration: 100,
         useNativeDriver: true,
       }).start();
     } else {
       Animated.timing(bottomNavAnim, {
         toValue: 1,
-        duration: 200,
+        duration: 100,
         useNativeDriver: true,
       }).start();
     }

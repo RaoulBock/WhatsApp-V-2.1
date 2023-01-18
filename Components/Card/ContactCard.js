@@ -8,6 +8,7 @@ const ContactCard = ({ item }) => {
   return (
     <TouchableOpacity
       style={styles.outline}
+      activeOpacity={1}
       //   onPress={() => {
       //     setSpecChat(item);
       //     setNavPage(APP_PAGES.APP.SPEC_CHAT);
@@ -22,8 +23,8 @@ const ContactCard = ({ item }) => {
           <Text style={styles.name}>{name}</Text>
           <Text style={styles.number}>{item.phoneNumber}</Text>
         </View>
-        <Text style={styles.btn}>{APP_ICONS.PHONE}</Text>
       </View>
+      <Text style={styles.btn}>{APP_ICONS.PHONE}</Text>
     </TouchableOpacity>
   );
 };
@@ -32,11 +33,12 @@ export default ContactCard;
 
 const styles = StyleSheet.create({
   outline: {
-    marginVertical: 10,
+    paddingVertical: 10,
     flexDirection: "row",
     alignItems: "center",
     borderBottomColor: "#eee",
     borderBottomWidth: 1,
+    justifyContent: "space-between",
   },
   image: {
     width: 70,

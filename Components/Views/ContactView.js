@@ -21,18 +21,18 @@ const ContactView = () => {
     <View style={styles.outline}>
       <View style={styles.grid}>
         <Text style={styles.title}>Contact</Text>
-        <Text style={styles.count}>{contacts.length} Contacts</Text>
       </View>
       <View style={{ marginVertical: 10 }}>
         <SearchInput placeholder={"Search for contacts"} />
+        <Text style={styles.count}>{contacts.length} Contacts</Text>
       </View>
       <FlatList
         data={contacts}
         renderItem={({ item }) => <ContactCard item={item} />}
         keyExtractor={(item) => `${item.id}-${item.name}`}
-        initialNumToRender={10}
+        initialNumToRender={5}
         onEndReachedThreshold={0.5}
-        maxToRenderPerBatch={10}
+        maxToRenderPerBatch={5}
         onEndReached={() => {
           setIsLoading(true);
           // fetch more data
@@ -69,7 +69,9 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   count: {
-    fontWeight: "500",
-    color: "#333",
+    fontWeight: "400",
+    color: "gray",
+    textAlign: "right",
+    fontSize: 12,
   },
 });
