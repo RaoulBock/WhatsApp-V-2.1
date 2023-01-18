@@ -28,13 +28,13 @@ const ChatsCard = ({ item }) => {
       <View style={styles.grid}>
         <Image source={{ uri: item.image }} style={styles.image} />
         <View style={styles.info}>
-          <View style={styles.grid}>
+          <View>
             <Text style={styles.name}>{item.message_from}</Text>
             <Text style={styles.time}>12:00am</Text>
-            <Text style={item.active ? styles.active : styles.dot}>•</Text>
-            <Text style={styles.activeText}>
+            {/* <Text style={item.active ? styles.active : styles.dot}>•</Text> */}
+            {/* <Text style={styles.activeText}>
               {item.active ? "Active" : "Offline"}
-            </Text>
+            </Text> */}
           </View>
           <Text style={{ width: width, color: "#404040", fontSize: 12 }}>
             {item.short_message.substring(0, 100)}
@@ -74,7 +74,6 @@ const styles = StyleSheet.create({
   time: {
     color: "gray",
     fontWeight: "500",
-    paddingHorizontal: 10,
     fontSize: 10,
   },
   active: {

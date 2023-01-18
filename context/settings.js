@@ -32,13 +32,13 @@ export const APP_ICONS = {
   HOME: (
     <Ionicons
       name="ios-home-outline"
-      style={{ color: "#fff", fontWeight: "500", fontSize: 28 }}
+      style={{ color: "#fff", fontWeight: "500", fontSize: 20 }}
     />
   ),
   PHONE: (
     <Ionicons
       name="ios-call-outline"
-      style={{ color: "#fff", fontWeight: "500", fontSize: 28 }}
+      style={{ color: "#fff", fontWeight: "500", fontSize: 20 }}
     />
   ),
   CAMERA: (
@@ -74,7 +74,7 @@ export const APP_ICONS = {
   DISCOVER: (
     <Ionicons
       name={"ios-compass-outline"}
-      style={{ color: "#5f40a6", fontWeight: "500", fontSize: 20 }}
+      style={{ color: "#fff", fontWeight: "500", fontSize: 20 }}
     />
   ),
 };

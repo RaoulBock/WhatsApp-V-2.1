@@ -6,6 +6,7 @@ import {
   StatusBar,
   ScrollView,
   RefreshControl,
+  Animated,
 } from "react-native";
 import React from "react";
 import { AppContext } from "../../context/AppContext";
@@ -24,24 +25,46 @@ const wait = (timeout) => {
 const HomeScreen = () => {
   const { tab } = React.useContext(AppContext);
   const [refreshing, setRefreshing] = React.useState(false);
+  const [scrollY, setScrollY] = React.useState(0);
+  const [bottomNavAnim] = React.useState(new Animated.Value(1)); // Initial value of 1
 
   const onRefresh = React.useCallback(() => {
     setRefreshing(true);
     wait(2000).then(() => setRefreshing(false));
   }, []);
+
+  const handleScroll = (event) => {
+    setScrollY(event.nativeEvent.contentOffset.y);
+  };
+
+  React.useEffect(() => {
+    if (scrollY > 100) {
+      Animated.timing(bottomNavAnim, {
+        toValue: 0,
+        duration: 200,
+        useNativeDriver: true,
+      }).start();
+    } else {
+      Animated.timing(bottomNavAnim, {
+        toValue: 1,
+        duration: 200,
+        useNativeDriver: true,
+      }).start();
+    }
+  }, [scrollY]);
+
   return (
     <View style={styles.outline}>
-      <View>
-        <HomeNav
-          name="Raoul Bock"
-          number={"0812345678"}
-          icon={APP_ICONS.SETTINGS}
-          img={
-            "https://i.pinimg.com/originals/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg"
-          }
-        />
-      </View>
+      {/* <HomeNav
+        name="Raoul Bock"
+        number={"0812345678"}
+        icon={APP_ICONS.SETTINGS}
+        img={
+          "https://i.pinimg.com/originals/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg"
+        }
+      /> */}
       <ScrollView
+        onScroll={handleScroll}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
@@ -52,7 +75,17 @@ const HomeScreen = () => {
           {tab === 2 && <ContactView />}
         </View>
       </ScrollView>
-      <BottomNav />
+      <Animated.View
+        style={{
+          opacity: bottomNavAnim,
+          bottom: 0,
+          left: 0,
+          right: 0,
+          position: "absolute",
+        }}
+      >
+        <BottomNav />
+      </Animated.View>
     </View>
   );
 };
