@@ -50,8 +50,8 @@ export default ChatsCard;
 
 const styles = StyleSheet.create({
   outline: {
-    borderTopColor: "#eee",
-    borderTopWidth: 1,
+    borderBottomColor: "#eee",
+    borderBottomWidth: 1,
     paddingVertical: 10,
   },
   image: {

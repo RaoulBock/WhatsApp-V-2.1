@@ -25,11 +25,11 @@ const ChatsView = () => {
 
       <View style={{ marginVertical: 10 }}>
         <SearchInput placeholder={"Search for chats"} />
-        <View style={styles.gridStatus}>
+        {/* <View style={styles.gridStatus}>
           {STATUS_USERS.map((e, i) => {
             return <StatusCard key={i} item={e} />;
           })}
-        </View>
+        </View> */}
         <Text style={styles.count}>{CHATS_DEMO.length} Chats</Text>
       </View>
       {CHATS_DEMO.map((e, i) => {

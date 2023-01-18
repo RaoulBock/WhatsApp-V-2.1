@@ -38,7 +38,7 @@ const HomeScreen = () => {
   };
 
   React.useEffect(() => {
-    if (scrollY > 100) {
+    if (scrollY > 50) {
       Animated.timing(bottomNavAnim, {
         toValue: 0,
         duration: 200,
