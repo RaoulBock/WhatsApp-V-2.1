@@ -30,16 +30,17 @@ const ChatsCard = ({ item }) => {
         <View style={styles.info}>
           <View>
             <Text style={styles.name}>{item.message_from}</Text>
-            <Text style={styles.time}>12:00am</Text>
+
             {/* <Text style={item.active ? styles.active : styles.dot}>•</Text> */}
             {/* <Text style={styles.activeText}>
               {item.active ? "Active" : "Offline"}
             </Text> */}
           </View>
           <Text style={{ width: width, color: "#404040", fontSize: 12 }}>
-            {item.short_message.substring(0, 100)}
+            {item.short_message.substring(0, 80)}
             {item.short_message.length >= 20 && "..."}
           </Text>
+          <Text style={styles.time}>12:00am</Text>
         </View>
       </View>
     </TouchableOpacity>

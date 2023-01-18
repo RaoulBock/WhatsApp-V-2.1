@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import React from "react";
+import { APP_ICONS } from "../../context/settings";
 
 const ContactCard = ({ item }) => {
   const name =
@@ -19,8 +20,9 @@ const ContactCard = ({ item }) => {
         </View>
         <View style={styles.info}>
           <Text style={styles.name}>{name}</Text>
-          <Text>{item.phoneNumber}</Text>
+          <Text style={styles.number}>{item.phoneNumber}</Text>
         </View>
+        <Text style={styles.btn}>{APP_ICONS.PHONE}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -33,6 +35,8 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     flexDirection: "row",
     alignItems: "center",
+    borderBottomColor: "#eee",
+    borderBottomWidth: 1,
   },
   image: {
     width: 70,
@@ -60,10 +64,25 @@ const styles = StyleSheet.create({
   slicer: {
     backgroundColor: "gray",
     borderRadius: 50,
-    width: 40,
-    height: 40,
+    width: 50,
+    height: 50,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
+  },
+  name: {
+    color: "#404040",
+    fontWeight: "400",
+    fontSize: 18,
+  },
+  number: {
+    color: "gray",
+    fontWeight: "400",
+    fontSize: 12,
+  },
+  btn: {
+    backgroundColor: "#9d79f44a",
+    padding: 8,
+    borderRadius: 50,
   },
 });
