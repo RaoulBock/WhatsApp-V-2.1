@@ -6,11 +6,12 @@ const HomeNav = ({ name, number, icon, icon_add, img }) => {
   return (
     <View style={styles.outline}>
       <View style={styles.display}>
-        <Image source={{ uri: img }} style={styles.image} />
+        {/* <Image source={{ uri: img }} style={styles.image} />
         <View style={{ paddingHorizontal: 10 }}>
           <Text style={[styles.text, styles.name]}>{name}</Text>
           <Text style={[styles.text, styles.number]}>{number}</Text>
-        </View>
+        </View> */}
+        <Text style={[styles.text, styles.name]}>WhatsApp</Text>
       </View>
       <View style={styles.grid}>
         <TouchableOpacity style={[styles.btn, {}]}>
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderBottomLeftRadius: 15,
     borderBottomRightRadius: 15,
-    elevation: 2,
+    elevation: 5,
     shadowColor: "#333",
     shadowOpacity: 1,
   },
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   name: {
-    fontSize: 20,
+    fontSize: 25,
     color: "#5f40a6",
   },
   number: {
@@ -65,10 +66,10 @@ const styles = StyleSheet.create({
   },
   display: {
     flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: "#9d79f44a",
-    padding: 7,
-    borderRadius: 14,
+    //alignItems: "center",
+    //backgroundColor: "#9d79f44a",
+    //padding: 7,
+    //borderRadius: 14,
   },
   image: {
     width: 35,

@@ -24,7 +24,7 @@ const ContactView = () => {
         <Text style={styles.count}>{contacts.length} Contacts</Text>
       </View>
       <View style={{ marginVertical: 10 }}>
-        <SearchInput placeholder={"Search for chats"} />
+        <SearchInput placeholder={"Search for contacts"} />
       </View>
       <FlatList
         data={contacts}
